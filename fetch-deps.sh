@@ -14,6 +14,4 @@ for dep in $deps; do
 done
 cd "$base"
 
-for dep in $deps; do
-  cabal sandbox add-source "${depslocation}/${dep}"
-done
+${tools}/register-deps.sh
