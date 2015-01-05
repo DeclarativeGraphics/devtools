@@ -10,7 +10,7 @@ fi
 
 cd "$depslocation"
 for dep in $deps; do
-  git clone "${dgrepo}/${dep}" "$dep"
+  git clone "${repo}/${dep}" "$dep"
 done
 cd "$base"
 
