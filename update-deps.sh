@@ -1,14 +1,15 @@
 #!/bin/sh
 
-base="$(dirname "$0")"
-source ${base}/settings.sh
+base="$(pwd)"
+tools="$(dirname "$0")"
+source ${tools}/settings.sh
 
-cd deps
+cd "$depslocation"
 for dep in $deps; do
   cd "$dep"
   git update
-  cd ..
+  cd -
 done
-cd ..
+cd "$base"
 
-${base}/install-deps.sh
+${tools}/install-deps.sh

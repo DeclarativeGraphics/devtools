@@ -1,18 +1,19 @@
 #!/bin/sh
 
-base="$(dirname "$0")"
-source ${base}/settings.sh
+base="$(pwd)"
+tools="$(dirname "$0")"
+source ${tools}/settings.sh
 
-if ! [ -e deps ]; then
-  mkdir deps
+if ! [ -e "$depslocation" ]; then
+  mkdir "$depslocation"
 fi
 
-cd deps
+cd "$depslocation"
 for dep in $deps; do
   git clone "${dgrepo}/${dep}" "$dep"
 done
-cd ..
+cd "$base"
 
 for dep in $deps; do
-  cabal sandbox add-source "deps/${dep}"
+  cabal sandbox add-source "${depslocation}/${dep}"
 done

@@ -1,7 +1,8 @@
 #!/bin/sh
 
-base="$(dirname "$0")"
+base="$(pwd)"
+tools="$(dirname "$0")"
 
-cd "$base"
+cd "$tools"
 git pull
-cd ..
+cd "$base"
