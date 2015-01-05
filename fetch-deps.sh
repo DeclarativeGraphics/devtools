@@ -2,7 +2,7 @@
 
 base="$(pwd)"
 tools="$(dirname "$0")"
-source ${tools}/settings.sh
+source devtools-settings.sh
 
 if ! [ -e "$depslocation" ]; then
   mkdir "$depslocation"
