@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 base="$(pwd)"
 tools="$(dirname "$0")"
-source devtools-settings.sh
+. devtools-settings.sh
 
 if ! [ -e "$depslocation" ]; then
   mkdir "$depslocation"

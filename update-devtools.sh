@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 base="$(pwd)"
 tools="$(dirname "$0")"
