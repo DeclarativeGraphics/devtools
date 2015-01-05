@@ -7,7 +7,7 @@ source ${tools}/settings.sh
 cd "$depslocation"
 for dep in $deps; do
   cd "$dep"
-  git update
+  git pull
   cd -
 done
 cd "$base"
